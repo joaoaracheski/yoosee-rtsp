@@ -1,0 +1,1 @@
+Coloque aqui o yolox_nano.onnx (ver README).

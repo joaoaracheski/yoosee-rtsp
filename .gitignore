@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+gravacoes/
+alertas/
+modelos/*.onnx
+*.jpg
+*.mp4
+*.log
+logs/
