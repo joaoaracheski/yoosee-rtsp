@@ -4,6 +4,8 @@ Grave, assista e vigie câmeras **Yoosee** em Python, direto na rede de casa: se
 
 **Sem assinatura e sem cartão de memória.** Pelo app, gravar de verdade exige o plano de nuvem da Yoosee ou um cartão microSD em cada câmera, que enche, sobrescreve e vai embora se alguém levar a câmera. Aqui a gravação vai para o disco de um computador da casa, com o espaço que você quiser e longe da câmera.
 
+<p align="center"><img src="docs/fluxo.svg" alt="Câmera Yoosee → yoosee-rtsp → gravar, movimento e servir" width="880"></p>
+
 > **English:** Yoosee IP cameras ship a broken RTSP server that ffmpeg and VLC reject. This is a small pure-Python RTSP client that works around it, so you can record 24/7 to your own disk with no cloud subscription and no microSD card. It also includes LAN discovery, motion detection with an optional on-device person filter (YOLOX-nano), and a `servir` command that republishes the cameras as standard RTSP through MediaMTX (so Home Assistant, Frigate and VLC just work). Code and docs are in Portuguese; the commands below work as-is.
 
 ## O problema

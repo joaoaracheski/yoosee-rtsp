@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <style>
+    .caixa { fill: #f6f8fa; stroke: #d0d7de; }
+    .destaque { fill: #ddf4ff; stroke: #54aeff; }
+    .titulo { fill: #1f2328; font-size: 15px; font-weight: 600; }
+    .texto { fill: #59636e; font-size: 12.5px; }
+    .seta { stroke: #8c959f; stroke-width: 2; fill: none; }
+    .ponta { fill: #8c959f; }
+    .recusa { fill: #cf222e; font-size: 12px; }
+    .recusa-linha { stroke: #cf222e; stroke-width: 2; stroke-dasharray: 5 4; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .caixa { fill: #161b22; stroke: #30363d; }
+      .destaque { fill: #0c2d6b; stroke: #1f6feb; }
+      .titulo { fill: #e6edf3; }
+      .texto { fill: #9198a1; }
+      .seta { stroke: #6e7681; }
+      .ponta { fill: #6e7681; }
+      .recusa { fill: #ff7b72; }
+      .recusa-linha { stroke: #ff7b72; }
+    }
+  </style>
+  <defs>
+    <marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path class="ponta" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <!-- câmera -->
+  <rect class="caixa" x="10" y="105" width="190" height="90" rx="10"/>
+  <text class="titulo" x="105" y="138" text-anchor="middle">Câmera Yoosee</text>
+  <text class="texto" x="105" y="160" text-anchor="middle">RTSP na porta 554,</text>
+  <text class="texto" x="105" y="177" text-anchor="middle">mas fora do padrão</text>
+
+  <!-- ffmpeg/VLC recusam -->
+  <path class="recusa-linha" d="M105,105 L105,55"/>
+  <text class="recusa" x="105" y="42" text-anchor="middle">ffmpeg e VLC recusam</text>
+
+  <!-- yoosee-rtsp -->
+  <path class="seta" d="M200,150 L268,150" marker-end="url(#p)"/>
+  <rect class="destaque" x="270" y="95" width="230" height="110" rx="10"/>
+  <text class="titulo" x="385" y="130" text-anchor="middle">yoosee-rtsp</text>
+  <text class="texto" x="385" y="153" text-anchor="middle">handshake que tolera as falhas</text>
+  <text class="texto" x="385" y="170" text-anchor="middle">RTP interleaved → H.265</text>
+  <text class="texto" x="385" y="187" text-anchor="middle">reconecta e acha a câmera pelo MAC</text>
+
+  <!-- saídas -->
+  <path class="seta" d="M500,135 C530,135 530,55 568,55" marker-end="url(#p)"/>
+  <path class="seta" d="M500,150 L568,150" marker-end="url(#p)"/>
+  <path class="seta" d="M500,165 C530,165 530,245 568,245" marker-end="url(#p)"/>
+
+  <rect class="caixa" x="570" y="15" width="300" height="80" rx="10"/>
+  <text class="titulo" x="590" y="46">gravar</text>
+  <text class="texto" x="590" y="68">.mp4 24/7 no disco de casa,</text>
+  <text class="texto" x="590" y="84">sem nuvem e sem microSD</text>
+
+  <rect class="caixa" x="570" y="110" width="300" height="80" rx="10"/>
+  <text class="titulo" x="590" y="141">movimento</text>
+  <text class="texto" x="590" y="163">diferença de quadros + YOLOX-nano</text>
+  <text class="texto" x="590" y="179">confirmando pessoa na área</text>
+
+  <rect class="caixa" x="570" y="205" width="300" height="80" rx="10"/>
+  <text class="titulo" x="590" y="236">servir</text>
+  <text class="texto" x="590" y="258">RTSP padrão via MediaMTX para</text>
+  <text class="texto" x="590" y="274">VLC, Home Assistant e Frigate</text>
+</svg>
